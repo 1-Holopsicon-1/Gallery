@@ -26,7 +26,7 @@ func (h *Handler) InitRoutes() *chi.Mux {
 			p.Get("/all", h.getAll)
 			p.With().Post("/publish", h.createPost)
 			p.With().Delete("/{id}", h.deletePost)
-			p.With().Put("/", h.editTags)
+			p.With().Put("/edit/{id}", h.editTags)
 		})
 		api.Route("/tag", func(tag chi.Router) {
 			tag.Get("/{tagName}", h.findByTag)
