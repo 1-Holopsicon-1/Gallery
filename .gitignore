@@ -195,4 +195,55 @@ fabric.properties
 !.idea/codeStyles
 !.idea/runConfigurations
 
-# End of https://www.toptal.com/developers/gitignore/api/go,goland+all,goland
+# Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,svelte,yarn
+# Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,svelte,yarn
+
+### Svelte ###
+# gitignore template for the SvelteKit, frontend web component framework
+# website: https://kit.svelte.dev/
+
+.svelte-kit/
+package
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+.ionide
+
+### yarn ###
+# https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
+
+.yarn/*
+!.yarn/releases
+!.yarn/patches
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+
+# if you are NOT using Zero-installs, then:
+# comment the following lines
+!.yarn/cache
+
+# and uncomment the following lines
+# .pnp.*
+
+# End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,svelte,yarn
+
+/node_modules/
+/public/build/
+
+.DS_Store
