@@ -243,8 +243,7 @@ package
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,svelte,yarn
 
-website/node_modules/
-website/public/build/
-website/.idea
+/node_modules/
+/public/build/
 
 .DS_Store
