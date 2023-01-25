@@ -29,7 +29,7 @@ func (h *Handler) InitRoutes() *chi.Mux {
 			p.With().Patch("/edit/{id}", h.editTags)
 		})
 		api.Route("/tag", func(tag chi.Router) {
-			tag.Get("/{tagName}", h.findByTag)
+			tag.Get("/{tagNames}", h.findByTag)
 		})
 	})
 	return router
