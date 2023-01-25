@@ -245,5 +245,6 @@ package
 
 /node_modules/
 /public/build/
-
+website/
+docs/
 .DS_Store
