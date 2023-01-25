@@ -3,7 +3,6 @@ package services
 import (
 	"Gallery/internal/app/dto"
 	"Gallery/internal/app/models"
-	"Gallery/internal/app/utils"
 	"encoding/json"
 	"fmt"
 	"github.com/go-chi/chi/v5"
@@ -12,8 +11,6 @@ import (
 	"net/http"
 	"strconv"
 )
-
-var c utils.Converter
 
 type PostService struct {
 }
