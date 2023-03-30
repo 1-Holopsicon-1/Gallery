@@ -9,8 +9,8 @@
 
 - Перенести логику handlers -> services:
   - [X]  Post
-  - [ ]  Tag
-  - [ ]  User
+  - [X]  Tag
+  - [X]  User
 
 - [ ]  Изменить логику сохранения картинки
 
@@ -27,7 +27,7 @@
   - [X]  Svelte
   - [X]  Grid
   - [X]  Main page - all posts
-  - [ ]  Поиск по тегу
+  - [X]  Поиск по тегу +-
 
 - [ ]  Sveltrap
 
