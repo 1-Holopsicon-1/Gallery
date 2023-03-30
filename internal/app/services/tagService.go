@@ -1,13 +1,39 @@
 package services
 
 import (
+	"Gallery/internal/app/models"
+	"Gallery/internal/app/utils"
+	"encoding/json"
 	"github.com/go-chi/chi/v5"
 	"gorm.io/gorm"
+	"log"
 	"net/http"
 	"strings"
 )
 
 type TagService struct {
+}
+
+var converter = utils.Converter{}
+
+func (ts *TagService) TagsByLetters(db *gorm.DB, r *http.Request) []string {
+	var (
+		tagInCome  string
+		tags       []models.Tags
+		tagsToSend []string
+	)
+	err := json.NewDecoder(r.Body).Decode(&tagInCome)
+	if tagInCome == " " || tagInCome == "" {
+		return nil
+	}
+	if err != nil {
+		log.Fatalln(err)
+	}
+	db.Select("name").Where("name ~ ?", tagInCome).Find(&tags)
+	for _, v := range tags {
+		tagsToSend = append(tagsToSend, v.Name)
+	}
+	return tagsToSend
 }
 
 func (ts *TagService) FindPostByNameTag(db *gorm.DB, r *http.Request) interface{} {

@@ -15,3 +15,10 @@ func (h *Handler) findByTag(w http.ResponseWriter, r *http.Request) {
 		log.Fatalln(err)
 	}
 }
+
+func (h *Handler) TagsByLetters(w http.ResponseWriter, r *http.Request) {
+	err := json.NewEncoder(w).Encode(tagService.TagsByLetters(h.DB, r))
+	if err != nil {
+		log.Fatalln(err)
+	}
+}
